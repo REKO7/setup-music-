@@ -1,8 +1,8 @@
 {
   "IMPORTANT": "FILL IN THE 4 NEXT PARAMETERS, OTHERWISE SOME THINGS MAY OR MAY NOT WORK COOKIE IS IMPORTNAT!",
   
-  "token": "Your_Bot_Token",
-  "prefix": "Your_Bot_prefix",
+  "token": "NzcxMTg3OTg1MjcwMDQ2NzQx.X5oexw.lQsnDwCcrPLaq-1sAMZEH05vJCw",
+  "prefix": ".",
   "cookie": "Youtube_Cookie",
 
 
@@ -13,8 +13,8 @@
     "no"  : "#FF264A"
   },
   "Spotify": {
-    "ClientID": "id" ,
-    "ClientSecret": "id"
+    "ClientID": "771187985270046741" ,
+    "ClientSecret": "pmddci6IN1KG-oGiWvzhkMwxE2CQxx7o"
   },
   "customs": {
     "clear": "dynaudnorm=f=200",

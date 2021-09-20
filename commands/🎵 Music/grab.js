@@ -6,7 +6,7 @@ module.exports = {
     name: "grab",
     category: "MUSIC COMMANDS",
     aliases: ["yoink", "save"],
-    useage: "grab |",
+    useage: "grab",
     description: "Saves current song in your DM",
     run: async (client, message, args) => {
         //if not a dj, return error - DISABLED BECAUSE NOT NEEDED

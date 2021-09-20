@@ -52,10 +52,10 @@ module.exports = {
 
             const embed = new MessageEmbed()
                 .setTitle("  \` Welcome to My Help Menu \` ")
-                .addField('', `Prefix: \`${config.prefix}\`\n  ${client.user} to get prefix info.`, true)
+                .addField('`Prefix: \`${config.prefix}\`\n  ${client.user} to get prefix info.`', true)
                 .addFields(categories)
                 .setDescription(
-                )
+                ``)
                 .setFooter(`To see command descriptions and inforamtion, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
                 .setThumbnail(client.user.displayAvatarURL())
                 .setColor(config.colors.yes)

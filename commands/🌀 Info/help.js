@@ -55,7 +55,6 @@ module.exports = {
                 .addField('Prefix Information', `Prefix: \`${config.prefix}\`\nYou can also mention ${client.user} to get prefix info.`, false)
                 .addFields(categories)
                 .setDescription(
-                    ` \`prefix 》 *help `
                 )
                 .setFooter(`To see command descriptions and inforamtion, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
                 .setThumbnail(client.user.displayAvatarURL())

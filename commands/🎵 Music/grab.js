@@ -3,7 +3,7 @@ const config = require("../../config.json")
 const Canvas = require('canvas');
 const Discord = require("discord.js");
 module.exports = {
-    name: "grab",
+    name: "grab |",
     category: "MUSIC COMMANDS",
     aliases: ["yoink", "save"],
     useage: "grab",
@@ -36,7 +36,6 @@ module.exports = {
             .setThumbnail(`https://img.youtube.com/vi/${queue.songs[0].id}/mqdefault.jpg`)
             .setURL(queue.songs[0].url)
             .setColor(config.colors.yes)
-            .setFooter("Made By Kabir Jaipal aka Tech Boy Gaming")
             .setTitle(`**:notes: Song Saved**`)
             .addField(`Duration: `, `\`${queue.songs[0].formattedDuration}\``, true)
             .addField(`Play it: `, `\`${prefix}play ${queue.songs[0].url}\``, true)

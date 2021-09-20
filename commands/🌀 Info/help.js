@@ -52,7 +52,7 @@ module.exports = {
 
             const embed = new MessageEmbed()
                 .setTitle("  \` Welcome to My Help Menu \` ")
-                .addField('Prefix Information', `Prefix: \`${config.prefix}\`\nYou can also mention ${client.user} to get prefix info.`, false)
+                .addField('Prefix Information', `Prefix: \`${config.prefix}\`\nYou can also mention ${client.user} to get prefix info.`, true)
                 .addFields(categories)
                 .setDescription(
                 )

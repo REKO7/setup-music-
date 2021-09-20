@@ -51,8 +51,8 @@ module.exports = {
             });
 
             const embed = new MessageEmbed()
-                .setTitle("  \` Welcome to My Help Menu \` ")
-                .addField('`Prefix: \`${config.prefix}\`\n  ${client.user} to get prefix info.`', true)
+                .setTitle("   Welcome to My Help Menu  ")
+                .addField(`Prefix: \`${config.prefix}\`\n  ${client.user} to get prefix info.`, true)
                 .addFields(categories)
                 .setDescription(
                 ``)

@@ -51,16 +51,16 @@ module.exports = {
             });
 
             const embed = new MessageEmbed()
-                .setTitle(" 😁😁 \` Welcome to My Help Menu \` 😁😁")
+                .setTitle("  \` Welcome to My Help Menu \` ")
                 .addField('Prefix Information', `Prefix: \`${config.prefix}\`\nYou can also mention ${client.user} to get prefix info.`, false)
                 .addFields(categories)
                 .setDescription(
-                    `Use \`${prefix}help\` followed by a command name to get more additional information on a command. For example: \`${prefix}help play\`.`
+                    ` \`prefix 》 *help `
                 )
                 .setFooter(`To see command descriptions and inforamtion, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL())
                 .setThumbnail(client.user.displayAvatarURL())
                 .setColor(config.colors.yes)
-                .setFooter("Made By Kabir Jaipal aka Tech Boy Gaming")
+                .setFooter("")
             return message.channel.send(embed);
         } else {
             const command =

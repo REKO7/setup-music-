@@ -210,8 +210,8 @@ async function playsongyes(client, message, queue, song) {
 
       .setColor(config.colors.yes)
       .setTitle("🎶 | Playing Song")
-      .setDescription(`Song: [\`${song.name}\`](${song.url})`, true)
-      .addField("`🩸 | Requested by:", `>>> ${song.user}`, true)
+      .setDescription(`Song: [\${song.name}\](${song.url})`, true)
+      .addField("🩸 | Requested by:", `>>> ${song.user}`, true)
       .addField(
         "⏱ Duration:",
         `>>> \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``,

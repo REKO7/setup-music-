@@ -58,7 +58,6 @@ function embedbuilder(
   try {
     let embed = new Discord.MessageEmbed()
       .setColor(color)
-      .setFooter("Coded By Tech Boy Gaming")
       .setAuthor(message.author.tag);
     if (title) embed.setTitle(title);
     if (description) embed.setDescription(description);

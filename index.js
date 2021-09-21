@@ -157,7 +157,7 @@ client.on('message', async (message) => {
         if (matchedPrefix.includes(client.user.id)) {
             return message.channel.send(new Discord.MessageEmbed()
                 .setColor(config.colors.yes)
-                .setFooter("Made By Kabir Jaipal aka Tech Boy Gaming")
+                .setFooter("Made By MrReKo")
                 .setTitle(`Hugh? I got pinged? Imma give you some help`)
                 .setDescription(`To see all Commands type: \`${prefix}help\``)
             )

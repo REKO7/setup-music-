@@ -184,7 +184,7 @@ function lyricsEmbed(client, message, song) {
         .setThumbnail(song.thumbnail)
         .setColor(config.colors.yes)
         .setDescription(current)
-        .setFooter("Made By Kabir Jaipal aka Tech Boy Gaming");
+        .setFooter("Music Bot✨");
       embeds.push(embed);
     }
     return embeds;

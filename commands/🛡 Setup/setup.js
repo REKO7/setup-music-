@@ -61,7 +61,7 @@ module.exports = {
                         .setThumbnail(client.user.displayAvatarURL()) 
                         .setTitle(" Music Bot - Best Free Music Bot of 2021")
                         .setDescription(`.\n[Invite  Music Bot✨](https://discord.com/api/oauth2/authorize?client_id=769330211157835784&permissions=8&scope=bot) | [Support](https://discord.gg/b3dmQYX5PH) | [Top.gg](https://top.gg/bot/769330211157835784/vote)`)
-                        .setImage('https://media.discordapp.net/attachments/793895916200919062/889683625090621440/20210921_042426.jpg')
+                        .setImage('https://media.discordapp.net/attachments/837692611590094868/889686815022403724/20210921_043700.jpg')
                         .setFooter("Prefix = *setup 》*help ")
 
                     //send a temp message

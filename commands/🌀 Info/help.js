@@ -32,17 +32,17 @@ const embed = new MessageEmbed()
 
 .setTitle("**Music Bot✨ **") 
 
-.addField(" | Setup ","`setup`, `reset`")
+.addField(" | Setup ","`setup` - `reset`")
 
-.addField(" | Information ","`stats`, `invite`, `ping`") 
+.addField(" | Information ","`stats` - `invite` - `ping`") 
 
-.addField(" | Music ","`play` - `playskip` - `autoplay` - `playlist` - `pause`  `resume` - `volume` - `stop` - `skip` - `seek` - `shuffle`  `loop` - `queue` - `clearqueue` - `jump` - `nowplaying`  `radio` - `removetrack` - `search` - `forward` - `grab` `status`") 
+.addField(" | Music ","`play` - `playskip` - `autoplay` - `playlist` - `pause`  `resume` - `volume` - `stop` - `skip` - `seek` - `shuffle`  `loop` - `queue` - `clearqueue` - `jump` - `nowplaying`  `radio` - `search` - `grab` `status`") 
 
-.addField(" | Filter ","`8d` - `bassboost` - `earrape` - `echo` - `flanger` - `gate`  `hass` - `heavybass` - `karaoke` - `lightbass`  `mcompand`  `nightcore` - `phaser` - `pulsator`  `reverse` - `subboost` - `surrounding` - `treble`  `tremolo` - `clear`") 
+.addField(" | Filter ","`8d` - `bassboost` - `flanger` - `gate` `heavybass` - `karaoke` - `lightbass` `nightcore` - `phaser` - `pulsator`  `reverse` - `subboost` - `treble` `clear`") 
  
 .setDescription( 
 
-`Music Bot✨ 》prefix 》*help` 
+`prefix 》*help` 
 
 ) 
 

@@ -209,9 +209,9 @@ async function playsongyes(client, message, queue, song) {
     let embed1 = new Discord.MessageEmbed()
 
       .setColor(config.colors.yes)
-      .setTitle(" | Playing Song")
+      .setTitle("🎧 | Playing Song")
       .setDescription(`song: [\`${song.name}\`](${song.url})`, true)
-      .addField(" | Requested by: ", `>>> ${song.user}`, true)
+      .addField(" 🎬| Requested by: ", `>>> ${song.user}`, true)
       .addField(
         " Duration:",
         `>>> \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``,

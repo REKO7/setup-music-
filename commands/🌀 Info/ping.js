@@ -16,15 +16,15 @@ module.exports = {
         message.channel.send(
             new MessageEmbed()
                 .setColor(config.colors.yes)
-                .setFooter("Made By Kabir Jaipal aka Tech Boy Gaming")
-                .setTitle(`${'🎈'} Pinging....`)
+                .setFooter("Music Bot✨")
+                .setTitle(`${'🏓'} Pinging....`)
         ).then(msg => {
             msg.edit(
                 new MessageEmbed()
                 .setColor(config.colors.yes)
-                .setFooter("Made By Kabir Jaipal aka Tech Boy Gaming")
+                .setFooter("ping Music Bot✨")
                 .setThumbnail(client.user.displayAvatarURL())
-                .setTitle(`${"🎈"} Ping: \`${Math.round(Date.now() - message.createdTimestamp)}ms\`\n\n${"🎈"} Api Latency: \`${Math.round(client.ws.ping)}ms\``)
+                .setTitle(`${"🏓"} Ping: \`${Math.round(Date.now() - message.createdTimestamp)}ms\`\n\n${"🎈"} Api Latency: \`${Math.round(client.ws.ping)}ms\``)
             )
         })
     }

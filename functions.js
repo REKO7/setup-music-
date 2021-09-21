@@ -249,7 +249,7 @@ async function playsongyes(client, message, queue, song) {
       console.log(error);
     }
     const filter = (reaction, user) =>
-      ["", "", "", "", "", "", ""].includes(
+      ["🔇", "🔉", "🎵", "↩", "⏩", "▶️", "⏪"].includes(
         reaction.emoji.id || reaction.emoji.name
       ) && user.id !== message.client.user.id;
 

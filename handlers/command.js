@@ -24,7 +24,7 @@ module.exports = (client) => {
     const guildonlycounter = new Map();
     client.on("ready", () => {
         console.log(`Bot User ${client.user.username} has been logged in and is ready to use!`);
-        client.user.setActivity(`${config.prefix}help | 24/7 Free Music Bot`, {
+        client.user.setActivity(`${config.prefix}help | New Update `, {
             type: 'WATCHING'
         });
     });

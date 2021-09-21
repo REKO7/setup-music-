@@ -42,7 +42,7 @@ module.exports = {
                 message.guild.channels.create(`🎵｜Just Music bot`, {
                     type: 'text', // text channel
                     rateLimitPerUser: 6, //set chat delay
-                    topic: `To request a Track, simply Type the **SONG NAME** into the Channel or the **URL** and the Bot will play it! Make sure that you are in the **right** Voice Channel (🎧｜JUGNU Music)!`,
+                    topic: `To request a Track, simply Type the **SONG NAME** into the Channel or the **URL** and the Bot will play it! Make sure that you are in the **right** Voice Channel (Music Bot✨)!`,
                     parent: channel1.id,
                     permissionOverwrites: [{
                         id: message.guild.id,

@@ -19,7 +19,7 @@ module.exports = {
             .setAuthor(message.author.username)
             .setDescription(`\`Click Below On Invite Link\``)
             .addField("**Onwer Bot ✨**", `
-                >>> <@747528109884178532> \`!   𝗙𝗞・𝗠𝗿.𝗥𝗲𝗞𝗼#1111 \` [\`INVITE\`](https://discord.com/api/oauth2/authorize?client_id=769330211157835784&permissions=8&scope=bot)
+                >>> <@747528109884178532> \`!   𝗙𝗞・𝗠𝗿.𝗥𝗲𝗞𝗼#1111 \` [\`Music Bot Support\`](https://discord.com/api/oauth2/authorize?client_id=769330211157835784&permissions=8&scope=bot)
                 `)
             .setFooter("Music Bot✨")
 

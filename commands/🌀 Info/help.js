@@ -34,7 +34,7 @@ const embed = new MessageEmbed()
 
 .addField(" | Setup ","`setup` - `reset`")
 
-.addField(" | Information ","`stats` - `invite` - `ping`") 
+.addField(" | Information ","`*help` - `invite` - `ping`") 
 
 .addField(" | Music ","`play` - `playskip` - `autoplay` - `playlist` - `pause`  `resume` - `volume` - `stop` - `skip` - `seek` - `shuffle`  `loop` - `queue` - `clearqueue` - `jump` - `nowplaying`  `radio` - `search` - `grab` `status`") 
 

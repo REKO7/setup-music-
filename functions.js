@@ -209,7 +209,7 @@ async function playsongyes(client, message, queue, song) {
     let embed1 = new Discord.MessageEmbed()
 
       .setColor(config.colors.yes)
-      .setTitle("🎶 Playing Song!")
+      .setTitle("<a:emoji_1:849776441126158337> Playing Song!")
       .setDescription(`Song: [\`${song.name}\`](${song.url})`)
       .addField("`🩸 Requested by:", `>>> ${song.user}`, true)
       .addField(
@@ -217,31 +217,7 @@ async function playsongyes(client, message, queue, song) {
         `>>> \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``,
         true
       )
-      .addField(
-        "🌀 Queue:",
-        `>>> \`${queue.songs.length} song(s) - ${queue.formattedDuration}\``,
-        true
-      )
-      .addField("🔊 Volume:", `>>> \`${queue.volume} %\``, true)
-      .addField("👀 Views:", `>>> \`${song.views.toLocaleString()}\``, true)
-      .addField(
-        "♾ Loop:",
-        `>>> ${
-          queue.repeatMode
-            ? queue.repeatMode === 2
-              ? "✅ Queue"
-              : "✅ Song"
-            : "❌"
-        }`,
-        true
-      )
-      .addField("↪️ Autoplay:", `>>> ${queue.autoplay ? "✅" : "❌"}`, true)
-      .addField("❔ Filter:", `>>> \`${queue.filter || "❌"}\``, true)
-      .setFooter("Best Music Bot✨")
-      .setAuthor(
-        message.author.tag,
-        message.member.user.displayAvatarURL({
-          dynamic: true,
+      
         })
       )
       .setThumbnail(`https://img.youtube.com/vi/${song.id}/mqdefault.jpg`);

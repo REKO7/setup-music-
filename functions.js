@@ -215,8 +215,7 @@ async function playsongyes(client, message, queue, song) {
       .addField(
         "⏱ Duration:",
         `>>> \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``,
-      )
-      
+
         })
       )
       .setThumbnail(`https://img.youtube.com/vi/${song.id}/mqdefault.jpg`);

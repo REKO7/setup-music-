@@ -30,19 +30,19 @@ if (!args[1]) {
 
 const embed = new MessageEmbed() 
 
-.setTitle("**Welcome to My Help Menu**") 
+.setTitle("**Music Bot✨ **") 
 
-.addField("ℹ️ Information","`stats`, `invite`, `ping`") 
+.addField(" | Setup ","`setup`, `reset`")
 
-.addField("🎵 Music","`play`, `playskip`, `addrelated`, `autoplay`, `playlist`, `pause`, `resume`, `volume`, `stop`, `skip`, `seek`, `shuffle`, `loop`, `queue`, `clearqueue`, `jump`, `nowplaying`, `radio`, `removetrack`, `rewind`, `search`, `searchrelated`, `forward`, `grab`, `status`") 
+.addField(" | Information |","`stats`, `invite`, `ping`") 
 
-.addField("🥁 Filter","`8d`, `bassboost`, `earrape`, `echo`, `flanger`, `gate`, `hass`, `heavybass`, `karaoke`, `lightbass`, `mcompand`, `nightcore`, `phaser`, `pulsator`, `purebass`, `reverse`, `subboost`, `surrounding`, `treble`, `tremolo`, `vaporwave`, `vibrato`, `clear`") 
+.addField(" | Music " - "`play` - `playskip` - `autoplay` - `playlist` - `pause` - `resume` - `volume` - `stop` - `skip` - `seek` - `shuffle` - `loop` - `queue` - `clearqueue` - `jump` - `nowplaying` - `radio` - `removetrack` - `search` - `forward` - `grab` - `status`") 
 
-.addField("🛡️ Setup","`setup`, `reset`") 
-
+.addField(" | Filter " -"`8d` - `bassboost` - `earrape` - `echo` - `flanger` - `gate` - `hass` - `heavybass` - `karaoke` - `lightbass` - `mcompand` - `nightcore` - `phaser` - `pulsator` - `reverse` - `subboost` - `surrounding` - `treble` - `tremolo` - `clear`") 
+ 
 .setDescription( 
 
-`Remix Bot✨ is one of the best bot to listen to songs to play song type: \`${prefix}play\`.` 
+`| Music Bot✨ to listen to songs to play song type: \`${prefix}play\`.` 
 
 ) 
 

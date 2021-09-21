@@ -15,7 +15,7 @@ module.exports = {
      */
     run: async (client, message, args) => {
         // code here
-        message.guild.channels.create("JUGNU Music - Requests", {
+        message.guild.channels.create("Music Bot✨ - Requests", {
             type: 'category',
             permissionOverwrites: [{
                 id: message.guild.id,

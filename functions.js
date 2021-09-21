@@ -215,7 +215,6 @@ async function playsongyes(client, message, queue, song) {
       .addField(
         "⏱ Duration:",
         `>>> \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``,
-        true
       )
       
         })

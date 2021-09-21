@@ -37,8 +37,6 @@ const embed = new MessageEmbed()
 .addField(" | Information ","`*help` - `invite` - `ping`") 
 
 .addField(" | Music ","`play` - `playskip` - `autoplay` - `playlist` - `pause`  `resume` - `volume` - `stop` - `skip` - `seek` - `shuffle`  `loop` - `queue` - `clearqueue` - `jump` - `nowplaying`  `radio` - `search` - `grab` `status`") 
-
-.addField(" | Filter ","`8d` - `bassboost` - `flanger` - `gate` `heavybass` - `karaoke` - `lightbass` `nightcore` - `phaser` - `pulsator`  `reverse` - `subboost` - `treble` `clear`") 
  
 .setDescription( 
 

@@ -39,7 +39,7 @@ const embed = new MessageEmbed()
 
 .addField("<a:emoji_1:849776457122185277> | Other ","`*help` - `invite` - `ping`") 
 
-.addField("<a:emoji_1:849776441126158337> | Music ","`play` - `playskip` - `autoplay` - `playlist` - `pause`  `resume` - `volume` - `stop` - `skip` - `seek` - `shuffle`  `loop` - `queue` - `clearqueue` - `jump` - `nowplaying`  `radio` - `search` - `grab` - `status`") 
+.addField("<a:emoji_1:849776441126158337> | Music ","\`play\` - `playskip` - `autoplay` - `playlist` - `pause`  `resume` - `volume` - `stop` - `skip` - `seek` - `shuffle`  `loop` - `queue` - `clearqueue` - `jump` - `nowplaying`  `radio` - `search` - `grab` - `status`") 
  
 
 

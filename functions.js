@@ -237,7 +237,7 @@ async function playsongyes(client, message, queue, song) {
       )
       .addField("↪️ Autoplay:", `>>> ${queue.autoplay ? "✅" : "❌"}`, true)
       .addField("❔ Filter:", `>>> \`${queue.filter || "❌"}\``, true)
-      .setFooter("Made By Kabir Jaipal aka Tech Boy Gaming")
+      .setFooter("Best Music Bot✨")
       .setAuthor(
         message.author.tag,
         message.member.user.displayAvatarURL({
@@ -276,7 +276,7 @@ async function playsongyes(client, message, queue, song) {
       console.log(error);
     }
     const filter = (reaction, user) =>
-      ["⏭", "⏯", "🔉", "🔊", "🔇", "⏹", "🎵"].includes(
+      ["", "", "", "", "", "", ""].includes(
         reaction.emoji.id || reaction.emoji.name
       ) && user.id !== message.client.user.id;
 

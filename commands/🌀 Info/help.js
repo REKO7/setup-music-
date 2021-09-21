@@ -31,6 +31,9 @@ if (!args[1]) {
 const embed = new MessageEmbed() 
 
 .setTitle("**Music Bot✨ **") 
+    .setFooter(message.author.username)
+  .setImage("https://cdn.discordapp.com/attachments/808760849867079721/838228786742820904/standard_1.gif") 
+  .setDescription(`[  **Support**  ](https://discord.gg/b3dmQYX5PH) - [   **Invite**   ](https://discord.com/api/oauth2/authorize?client_id=769330211157835784&permissions=8&scope=bot) - [  **Vote**  ](https://top.gg/bot/769330211157835784/vote)
 
 .addField("<a:SIA_DiscordStaff:803965271554392114> | Setup ","`setup` - `reset`")
 

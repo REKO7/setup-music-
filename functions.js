@@ -253,14 +253,14 @@ async function playsongyes(client, message, queue, song) {
     client.settings.set(message.guild.id, message.channel.id, "playingchannel");
 
     try {
-      await playingMessage.react("⏭");
-      await playingMessage.react("⏯");
-      await playingMessage.react("🔉");
-      await playingMessage.react("🔊");
-      await playingMessage.react("🔇");
-      await playingMessage.react("🔁");
-      await playingMessage.react("⏹");
-      await playingMessage.react("🎵");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
     } catch (error) {
       embedbuilder(
         client,

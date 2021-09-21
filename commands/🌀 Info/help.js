@@ -36,9 +36,9 @@ const embed = new MessageEmbed()
 
 .addField(" | Information ","`stats`, `invite`, `ping`") 
 
-.addField(" | Music ","`play` - `playskip` - `autoplay` - `playlist` - `pause` - `resume` - `volume` - `stop` - `skip` - `seek` - `shuffle` - `loop` - `queue` - `clearqueue` - `jump` - `nowplaying` - `radio` - `removetrack` - `search` - `forward` - `grab` - `status`") 
+.addField(" | Music ","`play` - `playskip` - `autoplay` - `playlist` - `pause`  `resume` - `volume` - `stop` - `skip` - `seek` - `shuffle`  `loop` - `queue` - `clearqueue` - `jump` - `nowplaying`  `radio` - `removetrack` - `search` - `forward` - `grab` `status`") 
 
-.addField(" | Filter ","`8d` - `bassboost` - `earrape` - `echo` - `flanger` - `gate` - `hass` - `heavybass` - `karaoke` - `lightbass` - `mcompand` - `nightcore` - `phaser` - `pulsator` - `reverse` - `subboost` - `surrounding` - `treble` - `tremolo` - `clear`") 
+.addField(" | Filter ","`8d` - `bassboost` - `earrape` - `echo` - `flanger` - `gate`  `hass` - `heavybass` - `karaoke` - `lightbass`  `mcompand` - `nightcore` - `phaser` - `pulsator`  `reverse` - `subboost` - `surrounding` - `treble`  `tremolo` - `clear`") 
  
 .setDescription( 
 

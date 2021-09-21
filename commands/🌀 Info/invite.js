@@ -17,7 +17,7 @@ module.exports = {
             .setTitle(client.user.username)
             .setThumbnail(client.user.displayAvatarURL())
             .setAuthor(message.author.username)
-            .setDescription(`\`Click Below On Invite Link\``)
+            .setDescription(`\`Click invite Music Bot✨ \``)
             .addField("**Onwer Bot ✨**", `
                 >>> <@747528109884178532> \`!   𝗙𝗞・𝗠𝗿.𝗥𝗲𝗞𝗼#1111 \` [\`Music Bot Support\`](https://discord.com/api/oauth2/authorize?client_id=769330211157835784&permissions=8&scope=bot)
                 `)

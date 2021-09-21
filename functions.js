@@ -517,7 +517,20 @@ function curembed(client, message) {
       .addField(
         "⏱ Duration:",
         `>>> \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``,
-
+        true
+      )
+      .addField(
+        "🌀 Queue:",
+        `>>> \`${queue.songs.length} song(s) - ${queue.formattedDuration}\``,
+        true
+      )
+      .addField("↪️ Autoplay:", `>>> ${queue.autoplay ? "✅" : "❌"}`, true)
+      .addField("❔ Filter:", `>>> \`${queue.filter || "❌"}\``, true)
+      .setFooter("Made By Kabir Jaipal aka Tech Boy Gaming")
+      .setAuthor(
+        message.author.tag,
+        message.member.user.displayAvatarURL({
+          dynamic: true,
         })
       )
       .setThumbnail(`https://img.youtube.com/vi/${song.id}/mqdefault.jpg`);

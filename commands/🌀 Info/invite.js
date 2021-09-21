@@ -18,10 +18,10 @@ module.exports = {
             .setThumbnail(client.user.displayAvatarURL())
             .setAuthor(message.author.username)
             .setDescription(`\`Click Below On Invite Link\``)
-            .addField("**__BOT BY:__**", `
-                >>> <@821095540569407508> \`ᴋᴀʙɪʀ々ꜱɪɴɢʜ🌙#8148\` [\`INVITE\`](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)
+            .addField("**Onwer Bot ✨**", `
+                >>> <@747528109884178532> \`!   𝗙𝗞・𝗠𝗿.𝗥𝗲𝗞𝗼#1111 \` [\`INVITE\`](https://discord.com/api/oauth2/authorize?client_id=769330211157835784&permissions=8&scope=bot)
                 `)
-            .setFooter("Made By Kabir Jaipal aka Tech Boy Gaming")
+            .setFooter("Music Bot✨")
 
         message.channel.send(invite)
     }

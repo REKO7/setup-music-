@@ -10,7 +10,7 @@ module.exports = {
         let invite = new MessageEmbed()
             .setColor(config.colors.yes)
             .setDescription(`Invite Link`)
-            .addField("Music Bot", `
+            .addField("Click Invite Music Bot✨", `
                  [Invite Music Bot✨](https://discord.com/api/oauth2/authorize?client_id=769330211157835784&permissions=8&scope=bot)
                 `)
 

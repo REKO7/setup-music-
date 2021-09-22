@@ -209,8 +209,8 @@ async function playsongyes(client, message, queue, song) {
     let embed1 = new Discord.MessageEmbed()
 
       .setColor(config.colors.yes)
-      .setTitle("🎧 | Playing Song")
-      .setDescription(`Song: [${song.name}](${song.url})\nRequested by: ${song.user}\nDuration: \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``)
+      .setTitle("<:868160707638755348:880217046854561853> | Playing Song")
+      .setDescription(`<a:emoji_1:849776441126158337> | Song: [${song.name}](${song.url})\nRequested by: ${song.user}\nDuration: \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``)
       .setThumbnail(`https://img.youtube.com/vi/${song.id}/mqdefault.jpg`);
 
     var playingMessage = await message.channel.send(embed1);

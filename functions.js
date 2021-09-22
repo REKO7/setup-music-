@@ -210,13 +210,7 @@ async function playsongyes(client, message, queue, song) {
 
       .setColor(config.colors.yes)
       .setTitle("🎧 | Playing Song")
-      .setDescription(`song: [\`${song.name}\`](${song.url})`, true)
-      .addField(" 🎬| Requested by: ", `>>> ${song.user}`, true)
-      .addField(
-        " Duration:",
-        `>>> \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``,
-        true
-      )
+      .setDescription(`Song: [${song.name}](${song.url})\nRequested by: ${song.user}\nDuration: \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``)
       .setThumbnail(`https://img.youtube.com/vi/${song.id}/mqdefault.jpg`);
 
     var playingMessage = await message.channel.send(embed1);
@@ -297,7 +291,7 @@ async function playsongyes(client, message, queue, song) {
             3000,
             message,
             config.colors.yes,
-            "SKIPPED!",
+            "SKIPPED",
             `Skipped the song`
           );
           collector.stop();
@@ -315,7 +309,7 @@ async function playsongyes(client, message, queue, song) {
               3000,
               message,
               config.colors.yes,
-              "PAUSHED!",
+              "PAUSED",
               `⏸ paused the music`
             );
           } else {
@@ -327,7 +321,7 @@ async function playsongyes(client, message, queue, song) {
               3000,
               message,
               config.colors.yes,
-              "RESUMED!",
+              "RESUMED",
               `▶ resumed the music!`
             );
           }
@@ -344,7 +338,7 @@ async function playsongyes(client, message, queue, song) {
               3000,
               message,
               config.colors.yes,
-              "UNMUTED!",
+              "UNMUTED",
               `🔊 unmuted the music!`
             );
           } else {
@@ -355,7 +349,7 @@ async function playsongyes(client, message, queue, song) {
               3000,
               message,
               config.colors.yes,
-              "MUTED!",
+              "MUTED",
               `🔇 muted the music!`
             );
           }
@@ -485,27 +479,7 @@ function curembed(client, message) {
     embed = new Discord.MessageEmbed()
       .setColor(config.colors.yes)
       .setTitle("🎶 Playing Song!")
-      .setDescription(`Song: [\`${song.name}\`](${song.url})`)
-      .addField("`🩸 Requested by:", `>>> ${song.user}`, true)
-      .addField(
-        "⏱ Duration:",
-        `>>> \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``,
-        true
-      )
-      .addField(
-        "🌀 Queue:",
-        `>>> \`${queue.songs.length} song(s) - ${queue.formattedDuration}\``,
-        true
-      )
-      .addField("↪️ Autoplay:", `>>> ${queue.autoplay ? "✅" : "❌"}`, true)
-      .addField("❔ Filter:", `>>> \`${queue.filter || "❌"}\``, true)
-      .setFooter("Made By Kabir Jaipal aka Tech Boy Gaming")
-      .setAuthor(
-        message.author.tag,
-        message.member.user.displayAvatarURL({
-          dynamic: true,
-        })
-      )
+      .setDescription(`Song: [${song.name}](${song.url})\nRequested by: ${song.user}\nDuration: \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``)
       .setThumbnail(`https://img.youtube.com/vi/${song.id}/mqdefault.jpg`);
     return embed; //sending the new embed back
   } catch (error) {

@@ -6,23 +6,15 @@ module.exports = {
     aliases: ['inv'],
     description: 'get my invite link',
     useage: 'invite',
-    /** 
-     * @param {Client} client 
-     * @param {Message} message 
-     * @param {String[]} args 
-     */
     run: async (client, message, args) => {
         let invite = new MessageEmbed()
             .setColor(config.colors.yes)
-            .setTitle(client.user.username)
-            .setThumbnail(client.user.displayAvatarURL())
-            .setAuthor(message.author.username)
-            .setDescription(`\`Click invite Music Bot✨ \``)
-            .addField("**Onwer Bot ✨**", `
-                >>> <@747528109884178532> \`\` [Music Bot Support](https://discord.com/api/oauth2/authorize?client_id=769330211157835784&permissions=8&scope=bot)
+            .setDescription(`Invite Link`)
+            .addField("Music Bot", `
+                 [Invite Music Bot✨](https://discord.com/api/oauth2/authorize?client_id=769330211157835784&permissions=8&scope=bot)
                 `)
-            .setFooter("Music Bot✨")
 
         message.channel.send(invite)
     }
 }
+

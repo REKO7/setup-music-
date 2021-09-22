@@ -32,6 +32,7 @@ const embed = new MessageEmbed()
 
 .setTitle("**__Help__ **") 
 
+
     .setFooter(message.author.username)
   .setImage("https://cdn.discordapp.com/attachments/808760849867079721/838228786742820904/standard_1.gif") 
   .setDescription(`**[  SUPPORT  ](https://discord.gg/b3dmQYX5PH)**  **[   INVITE  ](https://discord.com/api/oauth2/authorize?client_id=769330211157835784&permissions=8&scope=bot)**  **[  VOTE  ](https://top.gg/bot/769330211157835784/vote)**`)
@@ -41,7 +42,9 @@ const embed = new MessageEmbed()
 .addField("<a:SIA_DiscordStaff:803965271554392114> | Setup ","`setup` - `reset`")
 
 
+
 .addField("<a:emoji_1:849776457122185277> | Other ","`*help` - `invite` - `ping`") 
+
 
 
 .addField("<a:emoji_1:849776441126158337> | Music ","\`play\` - `playskip` - `autoplay` - `playlist` - `pause`  `resume` - `volume` - `stop` - `skip` - `seek` - `shuffle`  `loop` - `queue` - `clearqueue` - `jump` - `nowplaying`  `radio` - `search` - `grab` - `status`") 

@@ -4,13 +4,13 @@ const { readdirSync } = require("fs");
 const prefix = require("../../config.json").prefix; 
 const { MessageEmbed } = require("discord.js") 
 
-module.exports = { 
-name: 'help', 
-aliases: ['h'], 
-description: 'get get list of commands', 
-useage: 'help', 
-run: async (client, message, args) => { 
-if (!args[1]) { 
+module.exports = {
+    name: 'help',
+    aliases: ['h'],
+    description: 'get get list of commands',
+    useage: 'help',
+    run: async (client, message, args) => {
+    if (!args[1]) {
 
 const embed = new MessageEmbed() 
 .setTitle("**__Help__ **") 
@@ -23,69 +23,51 @@ const embed = new MessageEmbed()
 .setColor("RANDOM")
 
 return message.channel.send(embed); 
-} else { 
+} else {
+             const command =
+                 client.commands.get(args[0].toLowerCase()) ||
+                 client.commands.find(
+                     (c) => c.aliases && c.aliases.includes(args[0].toLowerCase())
+                 );
 
-const command = 
-client.commands.get(args[0].toLowerCase()) || 
-client.commands.find( 
+             if (!command) {
+                 const embed = new MessageEmbed()
+                     .setTitle(`Invalid command! Use \`${prefix}help\` for all of my commands!`)
+                     .setColor("RANDOM")
+                 return message.channel.send(embed);
+             }
 
-(c) => c.aliases && c.aliases.includes(args[0].toLowerCase()) 
-
-); 
-
- 
-
-if (!command) { 
-
-const embed = new MessageEmbed() 
-
-.setTitle(`Invalid command! Use \`${prefix}help\` for all of my commands!`) 
-
-.setColor("RANDOM") 
-
-return message.channel.send(embed); 
-
-} 
-
- 
-
-const embed = new MessageEmbed() 
-.setTitle("Command Details:") 
-.addField("PREFIX:", `\`${prefix}\``) 
-.addField( 
-"COMMAND:", 
-command.name ? `${command.name}` : "No name for this command") 
-
-.addField( 
-"ALIASES:", 
-command.aliases 
-
-? `${command.aliases.join("` `")}` 
-
-: "No aliases for this command") 
-
-.addField(
-"USAGE:",
-command.usage 
-
-? `${prefix}${command.name} ${command.usage}` 
-
-: `${prefix}${command.name}`) 
-
-.addField( 
-"DESCRIPTION:", 
-command.description 
-? command.description 
-: "No description for this command") 
-
-.setFooter(`Requested by ${message.author.tag}`, 
-message.author.displayAvatarURL({ dynamic: true })) 
-
-.setTimestamp() 
-.setColor("RANDOM") 
-return message.channel.send(embed); 
-
-} 
-
+             const embed = new MessageEmbed()
+                 .setTitle("Command Details:")
+                 .addField("PREFIX:", `\`${prefix}\``)
+                 .addField(
+                     "COMMAND:",
+                     command.name ? `\`${command.name}\`` : "No name for this command."
+                 )
+                 .addField(
+                     "ALIASES:",
+                     command.aliases
+                         ? `\`${command.aliases.join("` `")}\``
+                         : "No aliases for this command."
+                 )
+                 .addField(
+                     "USAGE:",
+                     command.usage
+                         ? `\`${prefix}${command.name} ${command.usage}\``
+                         : `\`${prefix}${command.name}\``
+                 )
+                 .addField(
+                     "DESCRIPTION:",
+                     command.description
+                         ? command.description
+                         : "No description for this command."
+                 )
+                 .setFooter(
+                     `Requested by ${message.author.tag}`,
+                     message.author.displayAvatarURL({ dynamic: true })
+                 )
+                 .setTimestamp()
+                 .setColor("RANDOM")
+             return message.channel.send(embed);
+}
 }}
-

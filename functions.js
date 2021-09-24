@@ -243,7 +243,7 @@ async function playsongyes(client, message, queue, song) {
       console.log(error);
     }
     const filter = (reaction, user) =>
-      ["🔇", "880217046854561853", "🎵", "↩", "⏩", "▶️", "⏪"].includes(
+      ["🔇", "<:868160707638755348:880217046854561853>", "🎵", "↩", "⏩", "▶️", "⏪"].includes(
         reaction.emoji.id || reaction.emoji.name
       ) && user.id !== message.client.user.id;
 
@@ -355,7 +355,7 @@ async function playsongyes(client, message, queue, song) {
           }
           break;
 
-        case "🔉":
+        case "<:868160707638755348:880217046854561853>":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           if (queue.volume - 10 <= 0) queue.volume = 0;

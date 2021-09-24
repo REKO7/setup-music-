@@ -10,6 +10,7 @@
     "common-tags": "^1.8.0",
     "deezer-public-api": "^1.0.4",
     "discord.js": "^12.5.3",
+    "ytdl-core":"^4.9.1",
     "discord.js-pagination": "^1.0.3",
     "distube": "^2.8.15",
     "enmap": "^5.8.6",

@@ -4,7 +4,7 @@ const client = new Client({
   fetchAllMembers: false,
   restTimeOffset: 0,
   shards: "auto",
-  disableEveryone: true,
+  disableEveryone: true
 });
 const config = require("./config.json");
 const { canModifyQueue } = require("./handlers/jugnu");
@@ -31,9 +31,9 @@ async function promptMessage(message, author, time, validReactions) {
   return message
     .awaitReactions(filter, {
       max: 1,
-      time: time,
+      time: time
     })
-    .then((collected) => collected.first() && collected.first().emoji.name);
+    .then(collected => collected.first() && collected.first().emoji.name);
 }
 
 function embedbuilder(
@@ -64,7 +64,7 @@ function embedbuilder(
     if (thumbnail) embed.setThumbnail(thumbnail);
     if (author) embed.setAuthor(author);
     if (!deletetime || deletetime === undefined || deletetime === "null") {
-      message.channel.send(embed).then((msg) => {
+      message.channel.send(embed).then(msg => {
         try {
           if (msg.channel.type === "news") msg.crosspost();
         } catch (error) {
@@ -74,9 +74,9 @@ function embedbuilder(
       });
       return;
     }
-    return message.channel.send(embed).then((msg) =>
+    return message.channel.send(embed).then(msg =>
       msg.delete({
-        timeout: deletetime,
+        timeout: deletetime
       })
     );
   } catch (error) {
@@ -111,7 +111,7 @@ function QueueEmbed(client, queue) {
       k += 10;
       const info = current
         .map(
-          (track) =>
+          track =>
             `**${j++} -** [\`${track.name}\`](${track.url}) - \`${
               track.formattedDuration
             }\``
@@ -210,7 +210,9 @@ async function playsongyes(client, message, queue, song) {
 
       .setColor(config.colors.yes)
       .setTitle("<:868160707638755348:880217046854561853> | Playing Song")
-      .setDescription(`<a:emoji_1:849776441126158337> | Song: [${song.name}](${song.url})\nRequested by: ${song.user}\nDuration: \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``)
+      .setDescription(
+        `<a:emoji_1:849776441126158337> | Song: [${song.name}](${song.url})\nRequested by: ${song.user}\nDuration: \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``
+      )
       .setThumbnail(`https://img.youtube.com/vi/${song.id}/mqdefault.jpg`);
 
     var playingMessage = await message.channel.send(embed1);
@@ -219,14 +221,14 @@ async function playsongyes(client, message, queue, song) {
     client.settings.set(message.guild.id, message.channel.id, "playingchannel");
 
     try {
-      await playingMessage.react("");
-      await playingMessage.react("");
-      await playingMessage.react("");
-      await playingMessage.react("");
-      await playingMessage.react("");
-      await playingMessage.react("");
-      await playingMessage.react("");
-      await playingMessage.react("");
+      await playingMessage.react("⏩");
+      await playingMessage.react("⏯️");
+      await playingMessage.react("🔇");
+      await playingMessage.react("🔉");
+      await playingMessage.react("🔊");
+      await playingMessage.react("🔁");
+      await playingMessage.react("⏹️");
+      await playingMessage.react("🎵");
     } catch (error) {
       embedbuilder(
         client,
@@ -243,12 +245,12 @@ async function playsongyes(client, message, queue, song) {
       console.log(error);
     }
     const filter = (reaction, user) =>
-      ["🔇", "<:868160707638755348:880217046854561853>", "🎵", "↩", "⏩", "▶️", "⏪"].includes(
+      ["🔇", "🔉", "🎵", "🔊", "⏩", "⏯️", "🔁", "⏹️"].includes(
         reaction.emoji.id || reaction.emoji.name
       ) && user.id !== message.client.user.id;
 
     var collector = await playingMessage.createReactionCollector(filter, {
-      time: song.duration > 0 ? song.duration * 1000 : 600000,
+      time: song.duration > 0 ? song.duration * 1000 : 600000
     });
     collector.on("collect", async (reaction, user) => {
       //return if no queue available
@@ -281,7 +283,7 @@ async function playsongyes(client, message, queue, song) {
         );
 
       switch (reaction.emoji.id || reaction.emoji.name) {
-        case "⏭":
+        case "⏩":
           queue.playing = true;
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
@@ -297,7 +299,7 @@ async function playsongyes(client, message, queue, song) {
           collector.stop();
           break;
 
-        case "⏯":
+        case "⏯️":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           if (queue.playing) {
@@ -355,7 +357,7 @@ async function playsongyes(client, message, queue, song) {
           }
           break;
 
-        case "<:868160707638755348:880217046854561853>":
+        case "🔉":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           if (queue.volume - 10 <= 0) queue.volume = 0;
@@ -453,7 +455,7 @@ async function playsongyes(client, message, queue, song) {
     collector.on("end", () => {
       playingMessage.reactions.removeAll();
       playingMessage.delete({
-        timeout: 7200,
+        timeout: 7200
       });
     });
   } catch (error) {
@@ -476,10 +478,12 @@ function curembed(client, message) {
   try {
     let queue = client.distube.getQueue(message); //get the current queue
     let song = queue.songs[0];
-    embed = new Discord.MessageEmbed()
+  let embed = new Discord.MessageEmbed()
       .setColor(config.colors.yes)
       .setTitle("🎶 Playing Song!")
-      .setDescription(`Song: [${song.name}](${song.url})\nRequested by: ${song.user}\nDuration: \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``)
+      .setDescription(
+        `Song: [${song.name}](${song.url})\nRequested by: ${song.user}\nDuration: \`${queue.formattedCurrentTime} / ${song.formattedDuration}\``
+      )
       .setThumbnail(`https://img.youtube.com/vi/${song.id}/mqdefault.jpg`);
     return embed; //sending the new embed back
   } catch (error) {
@@ -499,7 +503,7 @@ function curembed(client, message) {
 }
 
 function delay(delayInms) {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     setTimeout(() => {
       resolve(2);
     }, delayInms);
